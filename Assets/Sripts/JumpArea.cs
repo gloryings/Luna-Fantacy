@@ -50,13 +50,13 @@ public class JumpArea : MonoBehaviour
     {
         if (collision.CompareTag("Luna"))
         {
+            Debug.Log("[hotfix] Luna start jump");
             LunaController luna = collision.GetComponent<LunaController>();
             luna.Jump(true);  // ø™ ºÃ¯‘æ
 
             float disA = Vector3.Distance(luna.transform.position, jumpPointA.position);
             float disB = Vector3.Distance(luna.transform.position, jumpPointB.position);
             Transform target = disA > disB ? jumpPointA : jumpPointB;
-
             StartCoroutine(JumpToTarget(luna, target.position));
         }
     }
@@ -94,6 +94,7 @@ public class JumpArea : MonoBehaviour
         if (rb) rb.simulated = true;
 
         luna.Jump(false); // Ω· ¯Ã¯‘æ
+        Debug.Log("[hotfix] Luna finish jump");
     }
 
 }

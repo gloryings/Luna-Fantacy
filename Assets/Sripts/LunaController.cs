@@ -146,6 +146,7 @@ public class LunaController : MonoBehaviour
                 PetTheDog();
                 GameManager.Instance.canControlLuna = false;
                 collider.GetComponent<Dog>().BeHappy();
+                Debug.Log("[hotfix] Luna finish the task of petting the dog");
             }
         }
     }

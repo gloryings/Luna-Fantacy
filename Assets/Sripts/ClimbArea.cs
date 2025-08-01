@@ -8,6 +8,7 @@ public class ClimbArea : MonoBehaviour
     {
         if (collision.CompareTag("Luna"))
         {
+            Debug.Log("[hotfix] Luna entered climb area");
             collision.GetComponent<LunaController>().Climb(true);
         }
     }
@@ -16,6 +17,7 @@ public class ClimbArea : MonoBehaviour
     {
         if (collision.CompareTag("Luna"))
         {
+            Debug.Log("[hotfix] Luna entered climb area");
             collision.GetComponent<LunaController>().Climb(false);
         }
     }

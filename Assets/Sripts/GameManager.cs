@@ -129,11 +129,13 @@ public class GameManager : MonoBehaviour
             if (addKillNum > 0)
             {
                 DestoryMonster();
+                Debug.Log("[hotfix] Luna kill one monster");
             }
             monsterCurrentHP = 50;
             // luna战斗失败
             if(lunaCurrentHP <= 0)
             {
+                Debug.Log("[hotfix] Luna failed");
                 lunaCurrentHP = 100;
                 lunaCurrentMP = 0;
                 //battleMonsterGo.transform.position += new Vector3(2, 2, 0);     //移动一下，避免和luna重叠

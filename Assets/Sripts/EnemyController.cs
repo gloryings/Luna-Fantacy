@@ -72,6 +72,7 @@ public class EnemyController : MonoBehaviour
         {
             GameManager.Instance.EnterOrExitBattle(true);
             GameManager.Instance.SetMonster(gameObject);
+            Debug.Log("[hotfix] Luna enter the battle");
         }
     }
 }
